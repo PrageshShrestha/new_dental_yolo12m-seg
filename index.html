@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dental AI – Tooth List</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <h1>Dental AI</h1>
+      <p>Upload X-ray → Interactive Tooth List</p>
+    </header>
+
+    <!-- Upload -->
+    <div class="upload-container">
+      <div id="dropZone" class="drop-zone">
+        <p>Drop X-ray here or <span>click to upload</span></p>
+        <input type="file" id="fileInput" accept="image/*" />
+      </div>
+    </div>
+
+    <!-- Loading -->
+    <div id="loading" class="loading">Analyzing teeth...</div>
+
+    <!-- Viewer -->
+    <div id="viewer" class="viewer" style="display:none;">
+      <!-- Original Slide-in Panel -->
+      <div id="origPanel" class="panel slide-panel">
+        <div class="panel-header">
+          <span>Original X-ray</span>
+          <button class="close-btn" id="closeOrig">×</button>
+        </div>
+        <canvas id="origCanvas"></canvas>
+      </div>
+
+      <!-- Toggle Button -->
+      <button id="toggleOrig" class="toggle-btn">Original</button>
+
+      <!-- Segmented Canvas -->
+      <div class="canvas-section">
+        <h3 class="canvas-title">Segmented Image</h3>
+        <div class="canvas-wrapper">
+          <canvas id="segCanvas"></canvas>
+        </div>
+      </div>
+
+      <!-- Tooth Lists -->
+      <div class="lists-container">
+        <div class="tooth-list">
+          <h3>Detected Teeth</h3>
+          <div id="foundList" class="list"></div>
+        </div>
+        <div class="tooth-list">
+          <h3>Missing / Low Confidence</h3>
+          <div id="missingList" class="list"></div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <label><input type="checkbox" id="showMasks" checked /> Masks</label>
+        <label><input type="checkbox" id="showLabels" checked /> Labels</label>
+        <label><input type="checkbox" id="showMissing" /> Missing</label>
+        <button id="resetView">Reset View</button>
+        <button id="downloadBtn">Download Result</button>
+      </div>
+
+      <!-- Tooltip -->
+      <div id="tooltip" class="tooltip" style="display:none;"></div>
+
+      <!-- Info Panel -->
+      <div class="info-panel">
+        <h3>Tooth Details</h3>
+        <div id="toothInfo">
+          <p>Click a tooth number to view details</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
