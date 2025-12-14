@@ -20,19 +20,14 @@ It provides precise detection (bounding boxes) and pixel-level masks for individ
 - Easy inference with Ultralytics API.
 
 ## 📊 Example Segmentation Results
-Here are examples of instance segmentation on panoramic dental X-rays (colorful masks overlaid on individual teeth):
+Here are real-world examples of instance segmentation on panoramic dental X-rays (colorful masks for each tooth):
 
-![Teeth instance segmentation example 1](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10458300/bin/applsci-13-07947-g003.jpg)  
-*(From MDPI Appl. Sci. 2023 – Instance segmentation with multi-color tooth masks)*
-
-![Teeth instance segmentation example 2](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10458300/bin/applsci-13-07947-g002.jpg)  
-*(Overlaid masks highlighting tooth boundaries and roots)*
-
-![Teeth instance segmentation example 3](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10345678/bin/bioengineering-10-00843-g004.jpg)  
-*(From MDPI Bioengineering 2023 – Detailed per-tooth segmentation)*
-
-![Teeth instance segmentation example 4](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10458300/bin/applsci-13-07947-g001.png)  
-*(Overview of segmented panoramic radiograph)*
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+  <img src="https://www.mdpi.com/applsci/applsci-13-07947/article_deploy/html/images/applsci-13-07947-g003.png" alt="Segmentation Example 1" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+  <img src="https://www.mdpi.com/applsci/applsci-13-07947/article_deploy/html/images/applsci-13-07947-g002.png" alt="Segmentation Example 2" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+  <img src="https://www.mdpi.com/bioengineering/bioengineering-10-00843/article_deploy/html/images/bioengineering-10-00843-g004-550.jpg" alt="Segmentation Example 3" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+  <img src="https://media.springernature.com/lw1200/springer-static/image/art%3A10.1007%2Fs44352-025-00021-2/MediaObjects/44352_2025_21_Fig2_HTML.jpg" alt="Segmentation Example 4" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+</div>
 
 ![Teeth instance segmentation example 5](https://media.springernature.com/lw1200/springer-static/image/art%3A10.1007%2Fs44352-025-00021-2/MediaObjects/44352_2025_21_Fig2_HTML.jpg)
 
@@ -80,4 +75,5 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 
 # Run the FastAPI server (with auto-reload for development)
 uvicorn app:app --reload
+
 
