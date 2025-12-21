@@ -31,7 +31,7 @@ def class_color(cls_id):
 
 # ---------- 4. Draw function ----------
 def draw():
-    canvas = img.copy()
+    canvas = img.copy() #draw function 
 
     # --- masks ---
     if show_masks and results.masks is not None:
