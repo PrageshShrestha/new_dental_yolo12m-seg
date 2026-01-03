@@ -55,7 +55,7 @@ def get_class_colors(names, seed=42):
     hsv = [(i / n, 1.0, 1.0) for i in range(n)]
     colors = [colorsys.hsv_to_rgb(*c) for c in hsv]
     np.random.shuffle(colors)
-    return [(int(c[0]*255), int(c[1]*255), int(c[2]*255)) for c in colors]
+    return [(int(c[0]*250), int(c[1]*250), int(c[2]*250)) for c in colors]
 
 CLASS_COLORS = get_class_colors(model.names)
 print(f"[INFO] Generated {len(CLASS_COLORS)} class colors")
@@ -237,4 +237,4 @@ if __name__ == '__main__':
     print(f"[INFO] Uploads folder: {UPLOAD_FOLDER}")
     print(f"[INFO] Results folder: {RESULTS_FOLDER}")
     print(f"[INFO] Server starting at http://localhost:5000")
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    app.run(host='0.0.0.0', port=5001, debug=False)
